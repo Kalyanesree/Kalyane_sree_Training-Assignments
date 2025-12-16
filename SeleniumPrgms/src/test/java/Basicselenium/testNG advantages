@@ -1,0 +1,48 @@
+Advantages of TestNG over JUnit:
+
+TestNG is a powerful testing framework inspired by JUnit and NUnit, designed to overcome the limitations of JUnit and provide more advanced features for test automation. It is widely used in Selenium automation frameworks due to its flexibility, scalability, and rich functionality.
+
+1. Rich and Flexible Annotations
+
+TestNG provides a comprehensive set of annotations such as @BeforeSuite, @BeforeTest, @BeforeClass, @BeforeMethod, @AfterMethod, @AfterClass, @AfterTest, and @AfterSuite. These annotations allow precise control over the test execution lifecycle at different levels (suite, test, class, and method).
+JUnit offers comparatively fewer lifecycle annotations, limiting execution control in complex test scenarios.
+
+2. Support for Parallel Test Execution
+
+TestNG natively supports parallel execution of test cases, test classes, or test methods through simple configuration in the testng.xml file. This significantly reduces execution time, especially in large automation suites.
+JUnit requires additional configurations or third-party tools to achieve parallel execution.
+
+3. Test Case Grouping
+
+TestNG allows test cases to be grouped logically (such as smoke, sanity, and regression) using the groups attribute. This enables selective execution of test cases based on testing needs.
+JUnit does not provide built-in support for test grouping.
+
+4. Test Dependency Management
+
+TestNG supports defining dependencies between test methods using attributes like dependsOnMethods and dependsOnGroups. This is particularly useful in workflow-based testing where certain tests should run only after successful execution of prerequisite tests.
+JUnit lacks native support for managing test dependencies.
+
+5. Data-Driven Testing Capability
+
+TestNG supports data-driven testing using the @DataProvider annotation, allowing a single test method to be executed multiple times with different sets of data. This feature is flexible and easy to integrate with external data sources.
+JUnit’s data-driven testing capabilities are limited in comparison.
+
+6. Soft Assertions
+
+TestNG supports soft assertions, which allow a test to continue execution even after an assertion failure. All failures are collected and reported at the end of the test execution.
+JUnit primarily supports hard assertions, where test execution stops immediately upon failure.
+
+7. XML-Based Test Configuration
+
+TestNG uses an XML file (testng.xml) to control test execution, including test order, grouping, parameterization, and parallel execution. This external configuration improves maintainability and flexibility.
+JUnit does not offer an equivalent XML-based execution control mechanism.
+
+8. Detailed and Built-In Reporting
+
+TestNG automatically generates detailed HTML reports that include information about passed, failed, and skipped test cases. These reports help in effective analysis of test execution results.
+JUnit requires additional tools or plugins to generate comprehensive reports.
+
+9. Parameterization Support
+
+TestNG supports parameterization using @Parameters and testng.xml, enabling tests to be executed with different inputs without modifying the test code.
+JUnit offers limited parameterization support.

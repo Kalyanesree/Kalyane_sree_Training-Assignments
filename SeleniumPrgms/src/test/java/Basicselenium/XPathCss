@@ -1,0 +1,53 @@
+XPath and CSS Selectors are locator strategies used in Selenium WebDriver to identify and interact with web elements present in a webpage. A good understanding of these locators is essential for building reliable and maintainable automation scripts.
+
+XPath (XML Path Language):
+
+XPath is a language used to locate elements in an XML or HTML document by navigating through the document structure. It is powerful and flexible, allowing identification of elements even when IDs or class names are not available.
+
+Types of XPath:
+
+Absolute XPath:
+Absolute XPath starts from the root node of the document and follows the complete hierarchy to reach the element. It is not recommended because even a small change in the webpage structure can break it.
+Example: /html/body/div[2]/div/div/button
+
+Relative XPath:
+Relative XPath starts from anywhere in the document and is more reliable. It is widely used in Selenium automation.
+Example: //input[@name='q']
+
+Common XPath Functions:
+
+contains() – used when attribute values are partially dynamic
+
+starts-with() – used when attribute values start with a fixed string
+
+text() – used to locate elements based on visible text
+
+Logical operators like and, or for combining conditions
+
+XPath also allows traversal of parent, child, and sibling elements, which makes it very powerful.
+
+CSS Selector:
+
+CSS Selector is another locator strategy used to identify web elements based on CSS rules. It is generally faster and simpler than XPath and works efficiently when elements have stable IDs or class names.
+
+Types of CSS Selectors:
+
+ID Selector (#id)
+
+Class Selector (.className)
+
+Attribute Selector (tag[attribute='value'])
+
+Sub-string matching using *, ^, $
+
+CSS Selectors are easy to read and maintain but do not support locating elements by visible text or navigating upward in the DOM.
+
+Difference Between XPath and CSS Selector:
+
+XPath is more flexible and powerful, allowing text matching and traversal in all directions of the DOM. CSS Selector is faster and simpler but has limited functionality compared to XPath.
+
+Usage of XPath and CSS Selector:
+
+XPath is preferred when elements do not have unique IDs or when text-based or relationship-based identification is required. CSS Selector is preferred when elements have stable IDs or class names and better performance is needed.
+
+Both XPath and CSS Selectors are essential tools in Selenium automation. XPath provides greater flexibility, while CSS Selectors offer simplicity and speed. Choosing the appropriate locator depends on the structure of the webpage and the testing requirement.
